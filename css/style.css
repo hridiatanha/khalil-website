@@ -85,6 +85,7 @@ nav ul li a:hover {
   border-radius: 10px;
   padding: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.7;
 }
 
 /* Locations */
@@ -127,17 +128,14 @@ footer a {
   text-decoration: none;
 }
 
-.footer-hours {
-  margin-top: 25px;
-}
-
-.footer-hours h3 {
-  margin-bottom: 8px;
+footer h3 {
   color: #f4b400;
+  margin-top: 10px;
 }
 
-.footer-hours p {
+footer p {
   line-height: 1.6;
+  margin: 5px 0;
 }
 
 /* Responsive */
