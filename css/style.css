@@ -1,4 +1,4 @@
-/* GLOBAL STYLES */
+/* Global Styles */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -9,10 +9,10 @@ body {
 h2 {
   text-align: center;
   color: #7a1414;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-/* HEADER */
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -36,7 +36,6 @@ nav ul {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
 }
 
 nav ul li a:hover {
@@ -49,7 +48,7 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* HERO */
+/* Hero */
 .hero {
   position: relative;
   text-align: center;
@@ -58,7 +57,7 @@ nav ul li a:hover {
 
 .hero-image {
   width: 100%;
-  height: 65vh;
+  height: 60vh;
   object-fit: cover;
   filter: brightness(70%);
 }
@@ -73,175 +72,75 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
-.btn {
-  background: #f4b400;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* MENU */
-#menu {
-  padding: 40px 20px;
-}
-
-.menu-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.menu-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 280px;
+/* About Section */
+#about {
+  padding: 60px 20px 40px;
   text-align: center;
 }
 
-.menu-card h3 {
-  color: #7a1414;
-}
-
-/* GALLERY */
-#gallery {
-  padding: 40px 20px;
-}
-
-.slider {
-  position: relative;
-  max-width: 600px;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
-}
-
-.slides img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(122, 20, 20, 0.8);
-  color: white;
-  border: none;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.prev { left: 15px; }
-.next { right: 15px; }
-
-/* ABOUT */
-#about {
-  padding: 40px 20px;
-  background: #fff8ee;
-}
-
-.about-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.about-centered {
   max-width: 900px;
   margin: auto;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.about-text, .business-hours {
-  flex: 1 1 45%;
-  background: #fff;
-  padding: 20px;
+  background: white;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* LOCATIONS */
+/* Locations */
 #locations {
-  text-align: center;
   padding: 40px 20px;
+  text-align: center;
 }
 
 .locations-container {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  align-items: flex-start;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
 .location {
   flex: 1 1 45%;
-  max-width: 600px;
+  max-width: 550px;
+  text-align: center;
 }
 
 .location iframe {
   width: 100%;
-  height: 300px;
-  border: 0;
+  height: 320px;
   border-radius: 10px;
+  border: 0;
 }
 
-/* CONTACT */
-#contact {
-  padding: 40px 20px;
-  background: #fff8ee;
-}
-
-.contact-container {
-  display: flex;
-  justify-content: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 300px;
-}
-
-input, textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  background: #7a1414;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* FOOTER */
+/* Footer */
 footer {
   background: #7a1414;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 30px 15px;
 }
 
 footer a {
   color: #f4b400;
+  text-decoration: none;
 }
 
-/* RESPONSIVE */
+.footer-hours {
+  margin-top: 25px;
+}
+
+.footer-hours h3 {
+  margin-bottom: 8px;
+  color: #f4b400;
+}
+
+.footer-hours p {
+  line-height: 1.6;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   nav ul {
     display: none;
@@ -254,11 +153,16 @@ footer a {
     display: block;
   }
 
-  .about-container, .locations-container {
+  .locations-container {
     flex-direction: column;
+    gap: 25px;
   }
 
   .hero-image {
     height: 50vh;
+  }
+
+  .about-centered {
+    width: 90%;
   }
 }
