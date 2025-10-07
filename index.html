@@ -8,13 +8,13 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- HEADER & NAVIGATION -->
   <header>
-    <div class="logo">Khalil Biryani House</div>
+    <div class="logo">🍛 Khalil Biryani House</div>
     <nav id="navbar">
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#menu">Menu</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -22,27 +22,54 @@
     <div id="hamburger">&#9776;</div>
   </header>
 
-  <!-- 🖼️ Hero Section -->
+  <!-- HERO SECTION -->
   <section id="home" class="hero">
-    <img src="images/hero.jpg" alt="Khalil Biryani House" class="hero-image" />
+    <img src="images/hero.jpg" alt="Restaurant Banner" class="hero-image" />
     <div class="hero-content">
-      <h2>Authentic Bengali Biryani & Halal</h2>
       <h1>Khalil Biryani House</h1>
-      <p>Serving hearty biryanis, kebabs, and South Asian comfort food in New York.</p>
-      <a href="#gallery" class="btn">Explore Menu</a>
+      <p>Authentic Bengali & Halal Delicacies in New York</p>
+      <a href="#menu" class="btn">View Menu</a>
     </div>
   </section>
 
-  <!-- 📸 Gallery Section -->
+  <!-- MENU SECTION -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-container">
+      <div class="menu-card">
+        <h3>🍗 Biryani Specials</h3>
+        <p>Chicken Biryani - $9.99</p>
+        <p>Beef Biryani - $11.99</p>
+        <p>Goat Biryani - $12.99</p>
+        <p>Shrimp Biryani - $13.99</p>
+      </div>
+      <div class="menu-card">
+        <h3>🥘 Curries</h3>
+        <p>Chicken Curry - $10.99</p>
+        <p>Beef Bhuna - $11.99</p>
+        <p>Goat Curry - $12.99</p>
+        <p>Paneer Tikka Masala - $11.49</p>
+      </div>
+      <div class="menu-card">
+        <h3>🍢 Grilled</h3>
+        <p>Chicken Tikka - $9.99</p>
+        <p>Beef Seekh Kebab - $10.99</p>
+        <p>Chicken Malai Tikka - $9.49</p>
+        <p>Tandoori Chicken - $8.99</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="slider" id="gallery-slider">
       <div class="slides">
-        <img src="images/food1.webp" alt="Biryani" />
+        <img src="images/food1.webp" alt="Chicken Biryani" />
         <img src="images/food2.webp" alt="Beef Curry" />
         <img src="images/food3.webp" alt="Shrimp Biryani" />
         <img src="images/food4.webp" alt="Kebab Skewers" />
-        <img src="images/food5.webp" alt="Chicken 65" />
+        <img src="images/food5.webp" alt="Vegetarian Dish" />
         <img src="images/food6.webp" alt="Dessert" />
       </div>
       <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
@@ -50,55 +77,58 @@
     </div>
   </section>
 
-  <!-- ℹ️ About Us Section -->
+  <!-- ABOUT SECTION -->
   <section id="about">
     <h2>About Us</h2>
     <div class="about-container">
       <div class="about-text">
         <p>
-          Founded in July 2017, Khalil Biryani House has been serving authentic Bengali biryani, curries, and kebabs to New York and beyond.
-          We use halal-certified ingredients and the freshest spices to bring you the flavors of Bangladesh and South Asia.
+          Founded in July 2017, Khalil Biryani House has been serving authentic Bengali biryani,
+          curries, and kebabs to New York and beyond. We use halal-certified ingredients and the
+          freshest spices to bring you the flavors of Bangladesh and South Asia.
         </p>
       </div>
       <div class="business-hours">
         <h3>Business Hours</h3>
         <p>
-          Monday: 8 AM – 2 AM<br />
-          Tuesday: 8 AM – 2 AM<br />
-          Wednesday: 8 AM – 2 AM<br />
-          Thursday: 8 AM – 2 AM<br />
-          Friday: 8 AM – 2 AM<br />
-          Saturday: 8 AM – 2 AM<br />
-          Sunday: 8 AM – 2 AM
+          Monday – Sunday: 8 AM – 2 AM
         </p>
       </div>
     </div>
   </section>
 
-  <!-- 📞 Contact Section -->
+  <!-- CONTACT SECTION -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="contact-container">
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps?q=1457+Unionport+Rd,+Bronx,+NY+10462&output=embed"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <form>
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <div class="social">
-      <p>Follow us:</p>
+      <p>Follow Us:</p>
       <a href="https://www.facebook.com/orderkhalilsfood/" target="_blank">Facebook</a> |
       <a href="https://www.instagram.com/orderkhalilsfood/" target="_blank">Instagram</a> |
       <a href="https://www.linkedin.com/company/khalils-food/" target="_blank">LinkedIn</a>
     </div>
-
     <p>&copy; 2025 Khalil Biryani House. All rights reserved.</p>
   </footer>
 
   <script src="js/script.js"></script>
 </body>
 </html>
-
