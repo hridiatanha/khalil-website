@@ -1,68 +1,36 @@
-// ----------------------
-// 📱 Mobile Menu Toggle
-// ----------------------
-function toggleMenu() {
-  const nav = document.getElementById('navbar');
-  nav.classList.toggle('active');
-}
-
-// ----------------------
-// 🎞️ Gallery Slider
-// ----------------------
 let currentSlide = 0;
-let autoScroll; // for auto-scrolling control
+let autoScroll;
 
-function updateSlider() {
-  const slides = document.querySelector('.slides');
-  const count = slides.children.length;
-  currentSlide = (currentSlide + count) % count; // keep it in range
+// Move gallery slide manually
+function moveSlide(direction) {
+  const slides = document.querySelector(".slides");
+  const totalSlides = slides.children.length;
+  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
   slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-  // Update active dots if they exist
-  const dots = document.querySelectorAll('.dots span');
-  dots.forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
 }
 
-function moveSlide(step) {
-  currentSlide += step;
-  updateSlider();
-}
-
-function goToSlide(i) {
-  currentSlide = i;
-  updateSlider();
-}
-
-// ----------------------
-// 🌀 Auto-scroll + Pause on Hover
-// ----------------------
+// 🌀 Auto-scroll every 3 seconds
 function startAutoScroll() {
-  autoScroll = setInterval(() => moveSlide(1), 3000); // every 3s
+  autoScroll = setInterval(() => moveSlide(1), 3000);
 }
 
+// ⏸️ Pause on hover
 function stopAutoScroll() {
   clearInterval(autoScroll);
 }
 
-// ----------------------
-// 🚀 Initialize
-// ----------------------
-window.addEventListener('load', () => {
-  updateSlider();
+// Initialize
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.getElementById("gallery-slider");
   startAutoScroll();
 
-  const slider = document.querySelector('.slider');
-  if (slider) {
-    slider.addEventListener('mouseenter', stopAutoScroll);
-    slider.addEventListener('mouseleave', startAutoScroll);
-  }
+  slider.addEventListener("mouseenter", stopAutoScroll);
+  slider.addEventListener("mouseleave", startAutoScroll);
 
-  // Mobile nav toggle button (hamburger)
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.querySelector('nav ul');
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-      navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-    });
-  }
+  // Hamburger menu toggle
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.querySelector("nav ul");
+  hamburger.addEventListener("click", () => {
+    navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
+  });
 });
