@@ -5,11 +5,8 @@ let autoScroll = null;
 function moveSlide(direction) {
   const track = document.querySelector(".slides");
   if (!track) return;
-
   const total = track.children.length;
   currentSlide = (currentSlide + direction + total) % total;
-
-  // Shift the flex track one full slide
   track.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
@@ -27,7 +24,7 @@ function stopAutoScroll() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Slider wiring
+  // Slider
   const slider = document.getElementById("gallery-slider");
   if (slider) {
     startAutoScroll();
@@ -35,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slider.addEventListener("mouseleave", startAutoScroll);
   }
 
-  // Mobile nav toggle (class-based = reliable)
+  // Mobile nav toggle
   const hamburger = document.getElementById("hamburger");
   const nav = document.getElementById("navbar");
   if (hamburger && nav) {
