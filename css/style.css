@@ -131,4 +131,5 @@ h2 { text-align: center; color: #7a1414; margin-bottom: 24px; }
   .main-nav.open ul { display: flex; }
   .menu-grid { grid-template-columns: 1fr; }
   .locations-grid { grid-template-columns: 1fr; }
-  .contact-form .row {
+  .contact-form .row { grid-template-columns: 1fr; }
+}
