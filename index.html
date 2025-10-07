@@ -2,20 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Khalil Biryani House</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
   <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <a href="#home">
+  <header class="site-header">
+    <a href="#home" class="logo">
+      <!-- Use picture for robust image fallback -->
+      <picture>
+        <source srcset="images/cropped-cropped-Icon-logo_.png.webp" type="image/webp" />
         <img src="images/cropped-cropped-Icon-logo_.png.webp" alt="Khalil Biryani House Logo" />
-      </a>
-    </div>
-    <nav>
+      </picture>
+    </a>
+
+    <nav id="navbar" class="main-nav">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#menu">Menu</a></li>
@@ -24,12 +27,13 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div id="hamburger">&#9776;</div>
+
+    <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
   </header>
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <img src="images/hero.jpg" alt="Restaurant Banner" class="hero-image" />
+    <img src="images/hero.jpg" alt="Restaurant banner" class="hero-image" />
     <div class="hero-content">
       <h1>Khalil Biryani House</h1>
       <p>Authentic Bengali & Halal Delicacies in New York</p>
@@ -38,62 +42,59 @@
   </section>
 
   <!-- MENU -->
-  <section id="menu">
+  <section id="menu" class="section">
     <h2>Our Menu</h2>
-    <div class="menu-container">
-      <div class="menu-card">
+    <div class="menu-grid">
+      <article class="menu-card">
         <h3>🍗 Biryani Specials</h3>
-        <ul>
-          <li>Chicken Biryani - $9.99</li>
-          <li>Beef Biryani - $11.99</li>
-          <li>Goat Biryani - $12.99</li>
-          <li>Shrimp Biryani - $13.99</li>
-        </ul>
-      </div>
-      <div class="menu-card">
+        <p>Chicken Biryani - $9.99</p>
+        <p>Beef Biryani - $11.99</p>
+        <p>Goat Biryani - $12.99</p>
+        <p>Shrimp Biryani - $13.99</p>
+      </article>
+
+      <article class="menu-card">
         <h3>🥘 Curries</h3>
-        <ul>
-          <li>Chicken Curry - $10.99</li>
-          <li>Beef Bhuna - $11.99</li>
-          <li>Goat Curry - $12.99</li>
-          <li>Paneer Tikka Masala - $11.49</li>
-        </ul>
-      </div>
-      <div class="menu-card">
+        <p>Chicken Curry - $10.99</p>
+        <p>Beef Bhuna - $11.99</p>
+        <p>Goat Curry - $12.99</p>
+        <p>Paneer Tikka Masala - $11.49</p>
+      </article>
+
+      <article class="menu-card">
         <h3>🍢 Grilled</h3>
-        <ul>
-          <li>Chicken Tikka - $9.99</li>
-          <li>Beef Seekh Kebab - $10.99</li>
-          <li>Chicken Malai Tikka - $9.49</li>
-          <li>Tandoori Chicken - $8.99</li>
-        </ul>
-      </div>
+        <p>Chicken Tikka - $9.99</p>
+        <p>Beef Seekh Kebab - $10.99</p>
+        <p>Chicken Malai Tikka - $9.49</p>
+        <p>Tandoori Chicken - $8.99</p>
+      </article>
     </div>
   </section>
 
   <!-- GALLERY -->
-  <section id="gallery">
+  <section id="gallery" class="section">
     <h2>Gallery</h2>
-    <div class="slider" id="gallery-slider">
+
+    <div id="gallery-slider" class="slider" aria-label="Food gallery">
       <div class="slides">
-        <img src="images/food1.webp" alt="Dish 1" />
-        <img src="images/food2.webp" alt="Dish 2" />
-        <img src="images/food3.webp" alt="Dish 3" />
-        <img src="images/food4.webp" alt="Dish 4" />
-        <img src="images/food5.webp" alt="Dish 5" />
-        <img src="images/food6.webp" alt="Dish 6" />
+        <img src="images/food1.webp" alt="Chicken Biryani" />
+        <img src="images/food2.webp" alt="Beef Curry" />
+        <img src="images/food3.webp" alt="Shrimp Biryani" />
+        <img src="images/food4.webp" alt="Kebab Skewers" />
+        <img src="images/food5.webp" alt="Vegetarian Dish" />
+        <img src="images/food6.webp" alt="Dessert" />
       </div>
-      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      <button class="nav prev" onclick="moveSlide(-1)" aria-label="Previous slide">‹</button>
+      <button class="nav next" onclick="moveSlide(1)" aria-label="Next slide">›</button>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" class="section">
     <h2>About Us</h2>
     <div class="about-centered">
       <p>
-        Khalil's Food began operations in July 2017. We began our journey to provide authentic Indian 
+        Khalil's Food began operations in July 2017. We began our journey to provide authentic Indian
         and Asian cuisine through community service in the Bronx, New York.
       </p>
       <p>
@@ -107,49 +108,55 @@
   </section>
 
   <!-- LOCATIONS -->
-  <section id="locations">
+  <section id="locations" class="section">
     <h2>Our Locations</h2>
     <div class="locations-grid">
       <div class="location">
         <h3>Parkchester</h3>
-        <iframe src="https://www.google.com/maps?q=2104+Starling+Ave,+Bronx,+NY+10462&output=embed" allowfullscreen loading="lazy"></iframe>
-        <p>📍 <a href="https://goo.gl/maps/SH4sChULe5iAfe3Q8" target="_blank">2104 Starling Ave, Bronx, NY 10462</a></p>
+        <iframe
+          src="https://www.google.com/maps?q=2104+Starling+Ave,+Bronx,+NY+10462&output=embed"
+          loading="lazy" allowfullscreen></iframe>
+        <p>📍 <a target="_blank" href="https://goo.gl/maps/SH4sChULe5iAfe3Q8">2104 Starling Ave, Bronx, NY 10462</a></p>
       </div>
+
       <div class="location">
         <h3>Jackson Heights</h3>
-        <iframe src="https://www.google.com/maps?q=37-14+73rd+St,+Jackson+Heights,+NY+11372&output=embed" allowfullscreen loading="lazy"></iframe>
-        <p>📍 <a href="https://goo.gl/maps/jKHez4Yb8X72" target="_blank">37-14 73rd St, Jackson Heights, NY 11372</a></p>
+        <iframe
+          src="https://www.google.com/maps?q=37-14+73rd+St,+Jackson+Heights,+NY+11372&output=embed"
+          loading="lazy" allowfullscreen></iframe>
+        <p>📍 <a target="_blank" href="https://goo.gl/maps/jKHez4Yb8X72">37-14 73rd St, Jackson Heights, NY 11372</a></p>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
+  <section id="contact" class="section">
     <h2>Contact Us</h2>
-    <div class="contact-container">
-      <form>
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+    <form class="contact-form" action="#" method="post">
+      <div class="row">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+      </div>
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+      <button type="submit" class="btn btn-dark">Send Message</button>
+    </form>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="social">
-      <p>Follow Us:</p>
-      <a href="https://www.facebook.com/orderkhalilsfood/" target="_blank">Facebook</a> |
-      <a href="https://www.instagram.com/orderkhalilsfood/" target="_blank">Instagram</a> |
-      <a href="https://www.linkedin.com/company/khalils-food/" target="_blank">LinkedIn</a>
-      <br><br>
+  <footer class="site-footer">
+    <div>
+      <p>Follow Us:
+        <a href="https://www.facebook.com/orderkhalilsfood/" target="_blank">Facebook</a> |
+        <a href="https://www.instagram.com/orderkhalilsfood/" target="_blank">Instagram</a> |
+        <a href="https://www.linkedin.com/company/khalils-food/" target="_blank">LinkedIn</a>
+      </p>
       <h3>Business Hours</h3>
       <p>Monday – Sunday: 8 AM – 2 AM</p>
+      <p>&copy; 2025 Khalil Biryani House. All rights reserved.</p>
     </div>
-    <p>&copy; 2025 Khalil Biryani House. All rights reserved.</p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <!-- Defer makes sure JS runs after HTML is parsed -->
+  <script src="js/script.js" defer></script>
 </body>
 </html>
