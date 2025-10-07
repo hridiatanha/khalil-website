@@ -5,8 +5,11 @@ let autoScroll = null;
 function moveSlide(direction) {
   const track = document.querySelector(".slides");
   if (!track) return;
-  const total = track.children.length;
+  const slides = track.children;
+  const total = slides.length;
+
   currentSlide = (currentSlide + direction + total) % total;
+  track.style.transition = "transform 0.6s ease-in-out";
   track.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
@@ -20,18 +23,56 @@ function startAutoScroll() {
 
 // Pause auto-scroll
 function stopAutoScroll() {
-  if (!autoScroll) return;
-  clearInterval(autoScroll);
-  autoScroll = null;
+  if (autoScroll) {
+    clearInterval(autoScroll);
+    autoScroll = null;
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Slider logic
+  const track = document.querySelector(".slides");
   const slider = document.getElementById("gallery-slider");
-  if (slider) {
-    startAutoScroll();
+
+  if (track && slider) {
+    const slides = track.children;
+    const total = slides.length;
+
+    // Duplicate first slide for infinite looping
+    const firstClone = slides[0].cloneNode(true);
+    track.appendChild(firstClone);
+
+    let index = 0;
+
+    function slideNext() {
+      index++;
+      track.style.transition = "transform 0.6s ease-in-out";
+      track.style.transform = `translateX(-${index * 100}%)`;
+
+      // When reaching clone, reset to start instantly (no flicker)
+      if (index === total) {
+        setTimeout(() => {
+          track.style.transition = "none";
+          index = 0;
+          track.style.transform = "translateX(0)";
+        }, 600);
+      }
+    }
+
+    autoScroll = setInterval(slideNext, 3000);
+
+    // Manual nav buttons
+    document.querySelector(".next").addEventListener("click", slideNext);
+    document.querySelector(".prev").addEventListener("click", () => {
+      index = (index - 1 + total) % total;
+      track.style.transition = "transform 0.6s ease-in-out";
+      track.style.transform = `translateX(-${index * 100}%)`;
+    });
+
+    // Pause on hover
     slider.addEventListener("mouseenter", stopAutoScroll);
-    slider.addEventListener("mouseleave", startAutoScroll);
+    slider.addEventListener("mouseleave", () => {
+      if (!autoScroll) autoScroll = setInterval(slideNext, 3000);
+    });
   }
 
   // Mobile nav toggle
@@ -43,4 +84,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
