@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khalil Biryani House</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- Header -->
   <header>
+    <h1>Khalil Biryani House</h1>
     <nav>
-      <h1>Khalil Biryani House</h1>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#menu">Menu</a></li>
@@ -22,126 +22,97 @@
     </nav>
   </header>
 
-  <!-- HERO -->
+  <!-- Hero Section -->
   <section id="home" class="hero">
-    <h1>Khalil Biryani House</h1>
-    <p>Authentic Bengali Biryani &amp; Halal South Asian comfort food in New York.</p>
-    <button onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">Explore Menu</button>
+    <div class="hero-content">
+      <h2>Authentic Bengali Biryani & Halal</h2>
+      <h1>Khalil Biryani House</h1>
+      <p>Serving hearty biryanis, kebabs, and South Asian comfort food in New York.</p>
+      <a href="#menu" class="btn">Explore Menu</a>
+    </div>
   </section>
 
-  <!-- MENU -->
-  <section id="menu" class="menu">
+  <!-- Menu Section -->
+  <section id="menu">
     <h2>Our Menu</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
+    <div class="menu-container">
+      <div class="menu-category">
         <h3>Biryani Specials</h3>
-        <p>Chicken Biryani - $9.99</p>
-        <p>Beef Biryani - $11.99</p>
-        <p>Special Goat Biryani - $12.99</p>
-        <p>Special Lamb Biryani - $14.99</p>
-        <p>Shrimp Biryani - $14.99</p>
+        <p>Chicken Biryani - $9.99<br>Beef Biryani - $11.99<br>Special Goat Biryani - $12.99<br>Special Lamb Biryani - $14.99<br>Shrimp Biryani - $14.99</p>
       </div>
-
-      <div class="menu-item">
-        <h3>Tandoori &amp; Kebabs</h3>
-        <p>Chicken Tikka (6 pcs) - $9.99</p>
-        <p>Sheek Kabab (1 pc) - $2.50</p>
-        <p>Shami Kabab (1 pc) - $1.50</p>
-        <p>Tandoori Chicken (1 pc) - $3.99</p>
-        <p>Chapli Kabab (1 pc) - $1.99</p>
+      <div class="menu-category">
+        <h3>Tandoori & Kebabs</h3>
+        <p>Chicken Tikka (6 pcs) - $9.99<br>Sheek Kabab (1 pc) - $2.50<br>Shami Kabab (1 pc) - $1.50<br>Tandoori Chicken (1 pc) - $3.99<br>Chapli Kabab (1 pc) - $1.99</p>
       </div>
-
-      <div class="menu-item">
+      <div class="menu-category">
         <h3>Appetizers</h3>
-        <p>Chicken Samosa - $1.50</p>
-        <p>Vegetable Samosa - $1.50</p>
-        <p>Chicken 65 - $9.99</p>
-        <p>Fried Wontons (8 pcs) - $7.99</p>
-        <p>Hot Wings (6 pcs) - $7.99</p>
+        <p>Chicken Samosa - $1.50<br>Vegetable Samosa - $1.50<br>Chicken 65 - $9.99<br>Fried Wontons (8 pcs) - $7.99<br>Hot Wings (6 pcs) - $7.99</p>
       </div>
-
-      <div class="menu-item">
+      <div class="menu-category">
         <h3>Vegetarian</h3>
-        <p>Saag Paneer w/ Rice - $11.99</p>
-        <p>Paneer Tikka Masala w/ Rice - $12.99</p>
-        <p>Mixed Vegetables - $7.99</p>
-        <p>Chana Dal - $7.99</p>
-        <p>Okra - $7.99</p>
+        <p>Saag Paneer w/ Rice - $11.99<br>Paneer Tikka Masala w/ Rice - $12.99<br>Mixed Vegetables - $7.99<br>Chana Dal - $7.99<br>Okra - $7.99</p>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery" class="gallery">
+  <!-- Gallery -->
+  <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery-container">
-      <img src="images/biryani1.webp" alt="Biryani" />
-      <img src="images/biryani2.webp" alt="Biryani" />
-      <img src="images/restaurant1.webp" alt="Restaurant Interior" />
-      <img src="images/restaurant2.webp" alt="Restaurant Interior" />
-      <img src="images/dessert1.webp" alt="Dessert" />
-      <img src="images/kebab1.webp" alt="Kebab" />
+      <img src="images/food1.webp" alt="Chicken Biryani">
+      <img src="images/food2.webp" alt="Beef Biryani">
+      <img src="images/food3.webp" alt="Restaurant Interior">
+      <img src="images/food4.webp" alt="Tandoori Chicken">
+      <img src="images/food5.webp" alt="Dessert">
+      <img src="images/food6.webp" alt="Mixed Grill">
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="about">
+  <!-- About -->
+  <section id="about">
     <h2>About Us</h2>
-    <p>
-      Founded in July 2017, Khalil Biryani House has been serving authentic Bengali biryani, curries, and kebabs to the Bronx and beyond.
-      We use halal-certified ingredients, traditional recipes, and the freshest spices to bring you the flavors of Bangladesh and South Asia.
-      Our mission is to share the warmth of home-cooked food and the comfort of community with every dish.
-    </p>
+    <p>Founded in July 2017, Khalil Biryani House has been serving authentic Bengali biryani, curries, and kebabs to New York and beyond. We use halal-certified ingredients, traditional recipes, and the freshest spices to bring you the flavors of Bangladesh and South Asia. Our mission is to share the warmth of home-cooked food and community with every dish.</p>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
+  <!-- Locations -->
+  <section id="locations">
     <h2>Our Locations</h2>
-
-    <div class="map-grid">
-      <div class="map-item">
-        <h3>Parkchester Location</h3>
-        <iframe
-          src="https://www.google.com/maps?q=1457+Unionport+Rd,+Bronx,+NY+10462&output=embed"
-          width="100%"
-          height="300"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy">
-        </iframe>
-      </div>
-
-      <div class="map-item">
-        <h3>Jackson Heights Location</h3>
-        <iframe
-          src="https://www.google.com/maps?q=74-10+Broadway,+Elmhurst,+NY+11373&output=embed"
-          width="100%"
-          height="300"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy">
-        </iframe>
-      </div>
+    <div class="location">
+      <h3>Parkchester Location</h3>
+      <iframe src="https://www.google.com/maps?q=1457+Unionport+Rd,+Bronx,+NY+10462&output=embed" loading="lazy"></iframe>
     </div>
+    <div class="location">
+      <h3>Jackson Heights Location</h3>
+      <iframe src="https://www.google.com/maps?q=74-10+Broadway,+Elmhurst,+NY+11373&output=embed" loading="lazy"></iframe>
+    </div>
+  </section>
 
+  <!-- Contact -->
+  <section id="contact">
     <h2>Contact Us</h2>
     <form>
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea rows="4" placeholder="Message"></textarea>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer>
     <p>Follow us:</p>
     <a href="https://www.facebook.com/orderkhalilsfood/" target="_blank">Facebook</a> |
     <a href="https://www.instagram.com/orderkhalilsfood/" target="_blank">Instagram</a> |
     <a href="https://www.linkedin.com/company/khalils-food/" target="_blank">LinkedIn</a>
-    <p>Open Daily: 8 AM – 2 AM</p>
+
+    <div class="hours">
+      <h3>Business Hours</h3>
+      <p>Monday – Sunday: 8 AM – 2 AM</p>
+    </div>
+
     <p>&copy; 2025 Khalil Biryani House. All rights reserved.</p>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
