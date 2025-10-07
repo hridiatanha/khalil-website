@@ -1,6 +1,7 @@
 let currentSlide = 0;
 let autoScroll;
 
+// Move gallery slide manually
 function moveSlide(direction) {
   const slides = document.querySelector(".slides");
   const totalSlides = slides.children.length;
@@ -8,14 +9,17 @@ function moveSlide(direction) {
   slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
+// 🌀 Auto-scroll every 3 seconds
 function startAutoScroll() {
   autoScroll = setInterval(() => moveSlide(1), 3000);
 }
 
+// ⏸️ Pause on hover
 function stopAutoScroll() {
   clearInterval(autoScroll);
 }
 
+// Initialize on load
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.getElementById("gallery-slider");
 
@@ -25,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slider.addEventListener("mouseleave", startAutoScroll);
   }
 
+  // Hamburger menu toggle
   const hamburger = document.getElementById("hamburger");
   const navMenu = document.querySelector("nav ul");
 
