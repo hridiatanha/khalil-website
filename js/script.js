@@ -10,10 +10,12 @@ function moveSlide(direction) {
   track.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
-// Auto-scroll every 3 seconds
+// Auto-scroll every 3 seconds looping through all images
 function startAutoScroll() {
   if (autoScroll) return;
-  autoScroll = setInterval(() => moveSlide(1), 3000);
+  autoScroll = setInterval(() => {
+    moveSlide(1);
+  }, 3000);
 }
 
 // Pause auto-scroll
@@ -24,7 +26,7 @@ function stopAutoScroll() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Slider
+  // Slider logic
   const slider = document.getElementById("gallery-slider");
   if (slider) {
     startAutoScroll();
@@ -41,4 +43,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
