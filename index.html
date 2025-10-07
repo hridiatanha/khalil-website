@@ -8,13 +8,14 @@
 </head>
 <body>
 
-  <!-- HEADER & NAVIGATION -->
+  <!-- HEADER -->
   <header>
     <div class="logo">🍛 Khalil Biryani House</div>
     <nav id="navbar">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -22,7 +23,7 @@
     <div id="hamburger">&#9776;</div>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section id="home" class="hero">
     <img src="images/hero.jpg" alt="Restaurant Banner" class="hero-image" />
     <div class="hero-content">
@@ -32,7 +33,7 @@
     </div>
   </section>
 
-  <!-- MENU SECTION -->
+  <!-- MENU -->
   <section id="menu">
     <h2>Our Menu</h2>
     <div class="menu-container">
@@ -60,7 +61,7 @@
     </div>
   </section>
 
-  <!-- GALLERY SECTION -->
+  <!-- GALLERY -->
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="slider" id="gallery-slider">
@@ -77,7 +78,7 @@
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
+  <!-- ABOUT -->
   <section id="about">
     <h2>About Us</h2>
     <div class="about-container">
@@ -91,24 +92,52 @@
       <div class="business-hours">
         <h3>Business Hours</h3>
         <p>
-          Monday – Sunday: 8 AM – 2 AM
+          Monday: 8 AM–2 AM<br>
+          Tuesday: 8 AM–2 AM<br>
+          Wednesday: 8 AM–2 AM<br>
+          Thursday: 8 AM–2 AM<br>
+          Friday: 8 AM–2 AM<br>
+          Saturday: 8 AM–2 AM<br>
+          Sunday: 8 AM–2 AM
         </p>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
+  <!-- LOCATIONS -->
+  <section id="locations">
+    <h2>Our Locations</h2>
+    <div class="locations-container">
+      <div class="location">
+        <h3>Parkchester</h3>
+        <iframe
+          src="https://www.google.com/maps?q=2104+Starling+Ave,+Bronx,+NY+10462&output=embed"
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+        <p>📍 <a href="https://goo.gl/maps/SH4sChULe5iAfe3Q8" target="_blank">
+          2104 Starling Ave, Bronx, NY 10462
+        </a></p>
+      </div>
+
+      <div class="location">
+        <h3>Jackson Heights</h3>
+        <iframe
+          src="https://www.google.com/maps?q=37-14+73rd+St,+Jackson+Heights,+NY+11372&output=embed"
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+        <p>📍 <a href="https://goo.gl/maps/jKHez4Yb8X72" target="_blank">
+          37-14 73rd St, Jackson Heights, NY 11372
+        </a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact Us</h2>
     <div class="contact-container">
-      <div class="map">
-        <iframe
-          src="https://www.google.com/maps?q=1457+Unionport+Rd,+Bronx,+NY+10462&output=embed"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
-      </div>
-
       <form>
         <input type="text" placeholder="Name" required />
         <input type="email" placeholder="Email" required />
