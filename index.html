@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Khalil Biryani House</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
   <!-- Header -->
   <header>
     <div class="logo">Khalil Biryani House</div>
-    <nav id="nav-menu">
+    <nav id="navbar">
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -23,89 +22,65 @@
     <div id="hamburger">&#9776;</div>
   </header>
 
-  <!-- Hero -->
+  <!-- 🖼️ Hero Section -->
   <section id="home" class="hero">
-    <img src="images/hero.jpg" alt="Khalil Biryani House" class="hero-image">
+    <img src="images/hero.jpg" alt="Khalil Biryani House" class="hero-image" />
     <div class="hero-content">
       <h2>Authentic Bengali Biryani & Halal</h2>
       <h1>Khalil Biryani House</h1>
       <p>Serving hearty biryanis, kebabs, and South Asian comfort food in New York.</p>
-      <a href="#menu" class="btn">Explore Menu</a>
+      <a href="#gallery" class="btn">Explore Menu</a>
     </div>
   </section>
 
-  <!-- Menu -->
-  <section id="menu">
-    <h2>Our Menu</h2>
-    <div class="menu-container">
-      <div class="menu-category">
-        <h3>Biryani Specials</h3>
-        <p>Chicken Biryani - $9.99<br>Beef Biryani - $11.99<br>Special Goat Biryani - $12.99<br>Special Lamb Biryani - $14.99<br>Shrimp Biryani - $14.99</p>
-      </div>
-      <div class="menu-category">
-        <h3>Tandoori & Kebabs</h3>
-        <p>Chicken Tikka (6 pcs) - $9.99<br>Sheek Kabab (1 pc) - $2.50<br>Shami Kabab (1 pc) - $1.50<br>Tandoori Chicken (1 pc) - $3.99<br>Chapli Kabab (1 pc) - $1.99</p>
-      </div>
-      <div class="menu-category">
-        <h3>Appetizers</h3>
-        <p>Chicken Samosa - $1.50<br>Vegetable Samosa - $1.50<br>Chicken 65 - $9.99<br>Fried Wontons (8 pcs) - $7.99<br>Hot Wings (6 pcs) - $7.99</p>
-      </div>
-      <div class="menu-category">
-        <h3>Vegetarian</h3>
-        <p>Saag Paneer w/ Rice - $11.99<br>Paneer Tikka Masala - $12.99<br>Mixed Vegetables - $7.99<br>Chana Dal - $7.99<br>Okra - $7.99</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery Slider -->
+  <!-- 📸 Gallery Section -->
   <section id="gallery">
     <h2>Gallery</h2>
-    <div class="slider">
+    <div class="slider" id="gallery-slider">
       <div class="slides">
-        <img src="images/food1.webp" alt="Biryani">
-        <img src="images/food2.webp" alt="Beef Curry">
-        <img src="images/food3.webp" alt="Shrimp Biryani">
-        <img src="images/food4.webp" alt="Kebab Skewers">
-        <img src="images/food5.webp" alt="Chicken 65">
-        <img src="images/food6.webp" alt="Dessert">
+        <img src="images/food1.webp" alt="Biryani" />
+        <img src="images/food2.webp" alt="Beef Curry" />
+        <img src="images/food3.webp" alt="Shrimp Biryani" />
+        <img src="images/food4.webp" alt="Kebab Skewers" />
+        <img src="images/food5.webp" alt="Chicken 65" />
+        <img src="images/food6.webp" alt="Dessert" />
       </div>
       <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
       <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- ℹ️ About Us Section -->
   <section id="about">
     <h2>About Us</h2>
-    <p>Founded in July 2017, Khalil Biryani House has been serving authentic Bengali biryani, curries, and kebabs to New York and beyond. We use halal-certified ingredients and the freshest spices to bring you the flavors of Bangladesh and South Asia.</p>
-  </section>
-
-  <!-- Locations -->
-  <section id="locations">
-    <h2>Our Locations</h2>
-    <div class="locations-container">
-
-      <div class="location">
-        <h3>Parkchester Location</h3>
-        <iframe src="https://www.google.com/maps?q=1457+Unionport+Rd,+Bronx,+NY+10462&output=embed" loading="lazy"></iframe>
-        <p>📍 <a href="https://goo.gl/maps/6SYyS9v7shg2" target="_blank">1457 Unionport Rd, Bronx, NY 10462</a></p>
+    <div class="about-container">
+      <div class="about-text">
+        <p>
+          Founded in July 2017, Khalil Biryani House has been serving authentic Bengali biryani, curries, and kebabs to New York and beyond.
+          We use halal-certified ingredients and the freshest spices to bring you the flavors of Bangladesh and South Asia.
+        </p>
       </div>
-
-      <div class="location">
-        <h3>Jackson Heights Location</h3>
-        <iframe src="https://www.google.com/maps?q=74-10+Broadway,+Elmhurst,+NY+11373&output=embed" loading="lazy"></iframe>
-        <p>📍 <a href="https://goo.gl/maps/jKHez4Yb8X72" target="_blank">74-10 Broadway, Elmhurst, NY 11373</a></p>
+      <div class="business-hours">
+        <h3>Business Hours</h3>
+        <p>
+          Monday: 8 AM – 2 AM<br />
+          Tuesday: 8 AM – 2 AM<br />
+          Wednesday: 8 AM – 2 AM<br />
+          Thursday: 8 AM – 2 AM<br />
+          Friday: 8 AM – 2 AM<br />
+          Saturday: 8 AM – 2 AM<br />
+          Sunday: 8 AM – 2 AM
+        </p>
       </div>
-
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- 📞 Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
     <form>
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
       <textarea placeholder="Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
@@ -118,19 +93,6 @@
       <a href="https://www.facebook.com/orderkhalilsfood/" target="_blank">Facebook</a> |
       <a href="https://www.instagram.com/orderkhalilsfood/" target="_blank">Instagram</a> |
       <a href="https://www.linkedin.com/company/khalils-food/" target="_blank">LinkedIn</a>
-    </div>
-
-    <div class="hours">
-      <h3>Business Hours</h3>
-      <ul>
-        <li>Monday: 8 AM – 2 AM</li>
-        <li>Tuesday: 8 AM – 2 AM</li>
-        <li>Wednesday: 8 AM – 2 AM</li>
-        <li>Thursday: 8 AM – 2 AM</li>
-        <li>Friday: 8 AM – 2 AM</li>
-        <li>Saturday: 8 AM – 2 AM</li>
-        <li>Sunday: 8 AM – 2 AM</li>
-      </ul>
     </div>
 
     <p>&copy; 2025 Khalil Biryani House. All rights reserved.</p>
