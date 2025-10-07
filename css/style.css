@@ -1,8 +1,19 @@
+/* Global Styles */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: #fff8ee;
   color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #7a1414;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* HEADER */
@@ -11,25 +22,29 @@ header {
   justify-content: space-between;
   align-items: center;
   background: #7a1414;
-  color: #fff;
+  color: white;
   padding: 10px 20px;
 }
 
-header .logo {
+.logo {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
-header nav ul {
+nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-header nav a {
+nav ul li a {
   color: white;
-  text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f4b400;
 }
 
 #hamburger {
@@ -38,12 +53,11 @@ header nav a {
   cursor: pointer;
 }
 
-/* 🖼️ HERO SECTION */
+/* HERO */
 .hero {
   position: relative;
   text-align: center;
   color: white;
-  overflow: hidden;
 }
 
 .hero-image {
@@ -58,33 +72,51 @@ header nav a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   padding: 20px 40px;
   border-radius: 10px;
 }
 
 .hero-content h1 {
   font-size: 2.5em;
-}
-
-.hero-content h2 {
-  color: #f4b400;
-  font-size: 1.1em;
   margin-bottom: 10px;
 }
 
 .btn {
   background: #f4b400;
-  padding: 10px 20px;
   color: #000;
-  text-decoration: none;
-  font-weight: bold;
+  padding: 10px 20px;
   border-radius: 5px;
+  font-weight: bold;
 }
 
-/* 📸 GALLERY */
-#gallery {
+/* MENU */
+#menu {
+  padding: 40px 20px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
   text-align: center;
+}
+
+.menu-card h3 {
+  color: #7a1414;
+}
+
+/* GALLERY */
+#gallery {
   padding: 40px 20px;
 }
 
@@ -112,31 +144,29 @@ header nav a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(122, 20, 20, 0.7);
+  background-color: rgba(122, 20, 20, 0.8);
   color: white;
   border: none;
   font-size: 24px;
   padding: 10px;
   cursor: pointer;
   border-radius: 50%;
-  z-index: 10;
 }
 
 .prev { left: 15px; }
 .next { right: 15px; }
 
-/* ℹ️ ABOUT */
+/* ABOUT */
 #about {
   padding: 40px 20px;
   background: #fff8ee;
-  text-align: center;
 }
 
 .about-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 50px;
+  gap: 40px;
   flex-wrap: wrap;
   max-width: 1000px;
   margin: auto;
@@ -146,40 +176,49 @@ header nav a {
 .business-hours {
   flex: 1;
   min-width: 280px;
-  text-align: left;
 }
 
 .business-hours h3 {
   color: #7a1414;
 }
 
-.business-hours p {
-  line-height: 1.6;
-}
-
-/* 📞 CONTACT */
+/* CONTACT */
 #contact {
   padding: 40px 20px;
-  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.map iframe {
+  width: 400px;
+  height: 300px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 form {
-  max-width: 500px;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
+  width: 300px;
 }
 
 input, textarea {
   padding: 10px;
-  border: 1px solid #ccc;
   border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 button {
   background: #7a1414;
-  color: #fff;
+  color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -195,12 +234,12 @@ footer {
   background: #7a1414;
   color: white;
   text-align: center;
-  padding: 30px 10px;
+  padding: 20px 10px;
 }
 
 footer .social a {
   color: #f4b400;
-  text-decoration: none;
+  margin: 0 5px;
 }
 
 footer .social a:hover {
@@ -209,12 +248,12 @@ footer .social a:hover {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-  header nav ul {
-    flex-direction: column;
+  nav ul {
     display: none;
+    flex-direction: column;
     background: #7a1414;
     width: 100%;
-    padding: 10px 0;
+    text-align: center;
   }
 
   #hamburger {
@@ -225,13 +264,13 @@ footer .social a:hover {
     height: 50vh;
   }
 
-  .hero-content {
-    width: 90%;
-    font-size: 0.9em;
-  }
-
-  .about-container {
+  .about-container,
+  .contact-container {
     flex-direction: column;
     text-align: center;
+  }
+
+  .map iframe {
+    width: 100%;
   }
 }
