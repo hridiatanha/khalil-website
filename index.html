@@ -10,8 +10,8 @@
 
   <!-- Header -->
   <header>
-    <h1>Khalil Biryani House</h1>
-    <nav>
+    <div class="logo">Khalil Biryani House</div>
+    <nav id="nav-menu">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#menu">Menu</a></li>
@@ -20,10 +20,12 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <div id="hamburger">&#9776;</div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="home" class="hero">
+    <img src="images/hero.jpg" alt="Khalil Biryani House" class="hero-image">
     <div class="hero-content">
       <h2>Authentic Bengali Biryani & Halal</h2>
       <h1>Khalil Biryani House</h1>
@@ -32,7 +34,7 @@
     </div>
   </section>
 
-  <!-- Menu Section -->
+  <!-- Menu -->
   <section id="menu">
     <h2>Our Menu</h2>
     <div class="menu-container">
@@ -50,40 +52,51 @@
       </div>
       <div class="menu-category">
         <h3>Vegetarian</h3>
-        <p>Saag Paneer w/ Rice - $11.99<br>Paneer Tikka Masala w/ Rice - $12.99<br>Mixed Vegetables - $7.99<br>Chana Dal - $7.99<br>Okra - $7.99</p>
+        <p>Saag Paneer w/ Rice - $11.99<br>Paneer Tikka Masala - $12.99<br>Mixed Vegetables - $7.99<br>Chana Dal - $7.99<br>Okra - $7.99</p>
       </div>
     </div>
   </section>
 
-  <!-- Gallery -->
+  <!-- Gallery Slider -->
   <section id="gallery">
     <h2>Gallery</h2>
-    <div class="gallery-container">
-      <img src="images/food1.webp" alt="Chicken Biryani">
-      <img src="images/food2.webp" alt="Beef Biryani">
-      <img src="images/food3.webp" alt="Restaurant Interior">
-      <img src="images/food4.webp" alt="Tandoori Chicken">
-      <img src="images/food5.webp" alt="Dessert">
-      <img src="images/food6.webp" alt="Mixed Grill">
+    <div class="slider">
+      <div class="slides">
+        <img src="images/food1.webp" alt="Biryani">
+        <img src="images/food2.webp" alt="Beef Curry">
+        <img src="images/food3.webp" alt="Shrimp Biryani">
+        <img src="images/food4.webp" alt="Kebab Skewers">
+        <img src="images/food5.webp" alt="Chicken 65">
+        <img src="images/food6.webp" alt="Dessert">
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
   </section>
 
   <!-- About -->
   <section id="about">
     <h2>About Us</h2>
-    <p>Founded in July 2017, Khalil Biryani House has been serving authentic Bengali biryani, curries, and kebabs to New York and beyond. We use halal-certified ingredients, traditional recipes, and the freshest spices to bring you the flavors of Bangladesh and South Asia. Our mission is to share the warmth of home-cooked food and community with every dish.</p>
+    <p>Founded in July 2017, Khalil Biryani House has been serving authentic Bengali biryani, curries, and kebabs to New York and beyond. We use halal-certified ingredients and the freshest spices to bring you the flavors of Bangladesh and South Asia.</p>
   </section>
 
   <!-- Locations -->
   <section id="locations">
     <h2>Our Locations</h2>
-    <div class="location">
-      <h3>Parkchester Location</h3>
-      <iframe src="https://www.google.com/maps?q=1457+Unionport+Rd,+Bronx,+NY+10462&output=embed" loading="lazy"></iframe>
-    </div>
-    <div class="location">
-      <h3>Jackson Heights Location</h3>
-      <iframe src="https://www.google.com/maps?q=74-10+Broadway,+Elmhurst,+NY+11373&output=embed" loading="lazy"></iframe>
+    <div class="locations-container">
+
+      <div class="location">
+        <h3>Parkchester Location</h3>
+        <iframe src="https://www.google.com/maps?q=1457+Unionport+Rd,+Bronx,+NY+10462&output=embed" loading="lazy"></iframe>
+        <p>📍 <a href="https://goo.gl/maps/6SYyS9v7shg2" target="_blank">1457 Unionport Rd, Bronx, NY 10462</a></p>
+      </div>
+
+      <div class="location">
+        <h3>Jackson Heights Location</h3>
+        <iframe src="https://www.google.com/maps?q=74-10+Broadway,+Elmhurst,+NY+11373&output=embed" loading="lazy"></iframe>
+        <p>📍 <a href="https://goo.gl/maps/jKHez4Yb8X72" target="_blank">74-10 Broadway, Elmhurst, NY 11373</a></p>
+      </div>
+
     </div>
   </section>
 
@@ -100,14 +113,24 @@
 
   <!-- Footer -->
   <footer>
-    <p>Follow us:</p>
-    <a href="https://www.facebook.com/orderkhalilsfood/" target="_blank">Facebook</a> |
-    <a href="https://www.instagram.com/orderkhalilsfood/" target="_blank">Instagram</a> |
-    <a href="https://www.linkedin.com/company/khalils-food/" target="_blank">LinkedIn</a>
+    <div class="social">
+      <p>Follow us:</p>
+      <a href="https://www.facebook.com/orderkhalilsfood/" target="_blank">Facebook</a> |
+      <a href="https://www.instagram.com/orderkhalilsfood/" target="_blank">Instagram</a> |
+      <a href="https://www.linkedin.com/company/khalils-food/" target="_blank">LinkedIn</a>
+    </div>
 
     <div class="hours">
       <h3>Business Hours</h3>
-      <p>Monday – Sunday: 8 AM – 2 AM</p>
+      <ul>
+        <li>Monday: 8 AM – 2 AM</li>
+        <li>Tuesday: 8 AM – 2 AM</li>
+        <li>Wednesday: 8 AM – 2 AM</li>
+        <li>Thursday: 8 AM – 2 AM</li>
+        <li>Friday: 8 AM – 2 AM</li>
+        <li>Saturday: 8 AM – 2 AM</li>
+        <li>Sunday: 8 AM – 2 AM</li>
+      </ul>
     </div>
 
     <p>&copy; 2025 Khalil Biryani House. All rights reserved.</p>
