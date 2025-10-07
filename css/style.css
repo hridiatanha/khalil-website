@@ -16,7 +16,7 @@ h2 { text-align: center; color: #7a1414; margin-bottom: 24px; }
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 10px 24px;
+  padding: 8px 24px;
 }
 
 .header-inner {
@@ -27,10 +27,18 @@ h2 { text-align: center; color: #7a1414; margin-bottom: 24px; }
   margin: 0 auto;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .logo img {
-  height: 60px;
+  height: 45px;
   width: auto;
   display: block;
+  object-fit: contain;
+  vertical-align: middle;
 }
 
 .main-nav ul {
@@ -130,4 +138,5 @@ h2 { text-align: center; color: #7a1414; margin-bottom: 24px; }
   .menu-grid { grid-template-columns: 1fr; }
   .locations-grid { grid-template-columns: 1fr; }
   .contact-form .row { grid-template-columns: 1fr; }
+  .logo img { height: 35px; } /* smaller logo on mobile */
 }
