@@ -9,39 +9,29 @@ function moveSlide(direction) {
   slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
-// 🌀 Auto-scroll every 3 seconds
+// Auto-scroll every 3 seconds
 function startAutoScroll() {
   autoScroll = setInterval(() => moveSlide(1), 3000);
 }
 
-// ⏸️ Pause on hover
+// Pause on hover
 function stopAutoScroll() {
   clearInterval(autoScroll);
 }
 
-// Initialize on load
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.getElementById("gallery-slider");
-
   if (slider) {
     startAutoScroll();
     slider.addEventListener("mouseenter", stopAutoScroll);
     slider.addEventListener("mouseleave", startAutoScroll);
   }
 
-  // Hamburger menu toggle
+  // Hamburger menu
   const hamburger = document.getElementById("hamburger");
   const navMenu = document.querySelector("nav ul");
-
-  if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-      if (navMenu.style.display === "flex") {
-        navMenu.style.display = "none";
-      } else {
-        navMenu.style.display = "flex";
-        navMenu.style.flexDirection = "column";
-        navMenu.style.alignItems = "center";
-      }
-    });
-  }
+  hamburger.addEventListener("click", () => {
+    navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
+    navMenu.style.flexDirection = "column";
+  });
 });
