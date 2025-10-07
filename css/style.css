@@ -19,23 +19,33 @@ header {
   align-items: center;
   background: #7a1414;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
 }
 
 nav ul li a:hover {
@@ -72,6 +82,75 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
+.btn {
+  background: #f4b400;
+  padding: 10px 20px;
+  color: #7a1414;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* Menu */
+#menu {
+  padding: 40px 20px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Gallery */
+#gallery {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.slider {
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
 /* About Section */
 #about {
   padding: 60px 20px 40px;
@@ -86,6 +165,11 @@ nav ul li a:hover {
   padding: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   line-height: 1.7;
+}
+
+.about-centered p {
+  margin-bottom: 16px;
+  font-size: 1.05em;
 }
 
 /* Locations */
@@ -113,6 +197,37 @@ nav ul li a:hover {
   height: 320px;
   border-radius: 10px;
   border: 0;
+}
+
+/* Contact */
+#contact {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-container button {
+  background: #7a1414;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Footer */
