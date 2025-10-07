@@ -1,3 +1,4 @@
+/* General */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -38,16 +39,17 @@ header nav a {
   cursor: pointer;
 }
 
-/* Hero */
+/* 🖼️ Hero Section */
 .hero {
   position: relative;
   text-align: center;
   color: white;
+  overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
-  height: 80vh;
+  height: 65vh; /* Smaller and balanced */
   object-fit: cover;
   filter: brightness(70%);
 }
@@ -62,6 +64,16 @@ header nav a {
   border-radius: 10px;
 }
 
+.hero-content h1 {
+  font-size: 2.5em;
+}
+
+.hero-content h2 {
+  color: #f4b400;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
 .btn {
   background: #f4b400;
   padding: 10px 20px;
@@ -71,44 +83,38 @@ header nav a {
   border-radius: 5px;
 }
 
-/* Menu */
-#menu {
+/* 📸 Gallery */
+#gallery {
   text-align: center;
   padding: 40px 20px;
 }
 
-.menu-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-/* Gallery Slider */
 .slider {
   position: relative;
-  max-width: 90%;
+  max-width: 600px;
   margin: auto;
   overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .slides {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.6s ease-in-out;
 }
 
 .slides img {
   width: 100%;
-  max-width: 400px;
-  margin: 10px;
+  object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* Navigation buttons */
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(122, 20, 20, 0.8);
+  background-color: rgba(122, 20, 20, 0.7);
   color: white;
   border: none;
   font-size: 24px;
@@ -117,72 +123,52 @@ header nav a {
   border-radius: 50%;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev { left: 15px; }
+.next { right: 15px; }
 
-/* Locations */
-#locations {
-  text-align: center;
+/* ℹ️ About Us Section */
+#about {
   padding: 40px 20px;
+  background: #fff8ee;
+  text-align: center;
 }
 
-.locations-container {
+.about-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 30px;
+  gap: 50px;
   flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.location {
-  flex: 1 1 45%;
-  max-width: 600px;
-  text-align: center;
-}
-
-.location iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  border-radius: 10px;
-}
-
-.location p {
-  margin-top: 10px;
-}
-
-.location a {
-  color: #7a1414;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.location a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  background: #7a1414;
-  color: white;
-  text-align: center;
-  padding: 30px 10px;
-}
-
-footer .social a {
-  color: #f4b400;
-}
-
-footer .hours ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px auto;
-  max-width: 250px;
+.about-text,
+.business-hours {
+  flex: 1;
+  min-width: 280px;
   text-align: left;
+}
+
+.business-hours h3 {
+  color: #7a1414;
+}
+
+.business-hours p {
+  line-height: 1.6;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero-image {
+    height: 50vh;
+  }
+
+  .hero-content {
+    width: 90%;
+    font-size: 0.9em;
+  }
+
   header nav ul {
     flex-direction: column;
     display: none;
@@ -195,21 +181,8 @@ footer .hours ul {
     display: block;
   }
 
-  .menu-container {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-image {
-    height: 60vh;
-  }
-
-  .slides img {
-    max-width: 250px;
-  }
-
-  .locations-container {
+  .about-container {
     flex-direction: column;
-    gap: 20px;
+    text-align: center;
   }
 }
-
