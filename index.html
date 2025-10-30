@@ -26,10 +26,39 @@
 
       <div class="header-actions">
         <button class="order-btn">Order Online</button>
+
+        <!-- Cart Toggle -->
+        <button id="cart-toggle" class="cart-btn" aria-label="Open cart" aria-haspopup="dialog" aria-controls="cart-drawer">
+          🛒 <span id="cart-count" class="cart-count" aria-live="polite">0</span>
+        </button>
+
         <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
       </div>
     </div>
   </header>
+
+  <!-- CART DRAWER -->
+  <aside id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="cart-header">
+      <h2 id="cart-title">Your Cart</h2>
+      <button id="cart-close" class="cart-close" aria-label="Close cart">✕</button>
+    </div>
+
+    <div id="cart-items" class="cart-items" aria-live="polite"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <strong id="cart-total">$0.00</strong>
+      </div>
+      <div class="cart-actions">
+        <button id="clear-cart" class="btn btn-outline">Clear Cart</button>
+        <button class="btn btn-dark" disabled title="Demo only">Checkout</button>
+      </div>
+      <p class="cart-note">* Demo cart for Homework 2 (no payment processing).</p>
+    </div>
+  </aside>
+  <div id="cart-backdrop" class="cart-backdrop" hidden></div>
 
   <!-- HERO -->
   <section id="home" class="hero">
@@ -45,28 +74,73 @@
   <section id="menu" class="section">
     <h2>Our Menu</h2>
     <div class="menu-grid">
+      <!-- Card 1 -->
       <article class="menu-card">
         <h3>🍗 Biryani Specials</h3>
-        <p>Chicken Biryani - $9.99</p>
-        <p>Beef Biryani - $11.99</p>
-        <p>Goat Biryani - $12.99</p>
-        <p>Shrimp Biryani - $13.99</p>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <span>Chicken Biryani</span><span class="price">$9.99</span>
+            <button class="add-btn" data-name="Chicken Biryani" data-price="9.99">Add</button>
+          </li>
+          <li class="menu-item">
+            <span>Beef Biryani</span><span class="price">$11.99</span>
+            <button class="add-btn" data-name="Beef Biryani" data-price="11.99">Add</button>
+          </li>
+          <li class="menu-item">
+            <span>Goat Biryani</span><span class="price">$12.99</span>
+            <button class="add-btn" data-name="Goat Biryani" data-price="12.99">Add</button>
+          </li>
+          <li class="menu-item">
+            <span>Shrimp Biryani</span><span class="price">$13.99</span>
+            <button class="add-btn" data-name="Shrimp Biryani" data-price="13.99">Add</button>
+          </li>
+        </ul>
       </article>
 
+      <!-- Card 2 -->
       <article class="menu-card">
         <h3>🥘 Curries</h3>
-        <p>Chicken Curry - $10.99</p>
-        <p>Beef Bhuna - $11.99</p>
-        <p>Goat Curry - $12.99</p>
-        <p>Paneer Tikka Masala - $11.49</p>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <span>Chicken Curry</span><span class="price">$10.99</span>
+            <button class="add-btn" data-name="Chicken Curry" data-price="10.99">Add</button>
+          </li>
+          <li class="menu-item">
+            <span>Beef Bhuna</span><span class="price">$11.99</span>
+            <button class="add-btn" data-name="Beef Bhuna" data-price="11.99">Add</button>
+          </li>
+          <li class="menu-item">
+            <span>Goat Curry</span><span class="price">$12.99</span>
+            <button class="add-btn" data-name="Goat Curry" data-price="12.99">Add</button>
+          </li>
+          <li class="menu-item">
+            <span>Paneer Tikka Masala</span><span class="price">$11.49</span>
+            <button class="add-btn" data-name="Paneer Tikka Masala" data-price="11.49">Add</button>
+          </li>
+        </ul>
       </article>
 
+      <!-- Card 3 -->
       <article class="menu-card">
         <h3>🍢 Grilled</h3>
-        <p>Chicken Tikka - $9.99</p>
-        <p>Beef Seekh Kebab - $10.99</p>
-        <p>Chicken Malai Tikka - $9.49</p>
-        <p>Tandoori Chicken - $8.99</p>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <span>Chicken Tikka</span><span class="price">$9.99</span>
+            <button class="add-btn" data-name="Chicken Tikka" data-price="9.99">Add</button>
+          </li>
+          <li class="menu-item">
+            <span>Beef Seekh Kebab</span><span class="price">$10.99</span>
+            <button class="add-btn" data-name="Beef Seekh Kebab" data-price="10.99">Add</button>
+          </li>
+          <li class="menu-item">
+            <span>Chicken Malai Tikka</span><span class="price">$9.49</span>
+            <button class="add-btn" data-name="Chicken Malai Tikka" data-price="9.49">Add</button>
+          </li>
+          <li class="menu-item">
+            <span>Tandoori Chicken</span><span class="price">$8.99</span>
+            <button class="add-btn" data-name="Tandoori Chicken" data-price="8.99">Add</button>
+          </li>
+        </ul>
       </article>
     </div>
   </section>
@@ -158,4 +232,3 @@
   <script src="js/script.js" defer></script>
 </body>
 </html>
-
