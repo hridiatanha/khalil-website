@@ -11,21 +11,27 @@ dotenv.config();
 
 const app = express();
 
-// middleware
-app.use(cors());
+// ✅ middleware (CORS + JSON)
+app.use(
+  cors({
+    origin: "*", // OK for class project (lock down later)
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 app.use(express.json());
 
-// health
+// ✅ health
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok" });
 });
 
-// routes
+// ✅ routes
 app.use("/api/menu", menuRoutes);
 app.use("/api/carts", cartRoutes);
 app.use("/api/orders", orderRoutes);
 
-// mongo + start
+// ✅ connect + start
 const PORT = process.env.PORT || 5001;
 
 mongoose
@@ -34,4 +40,7 @@ mongoose
     console.log("✅ MongoDB connected");
     app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
   })
-  .catch((err) => console.error("❌ Mongo error:", err));
+  .catch((err) => {
+    console.error("❌ Mongo error:", err);
+    process.exit(1);
+  });
