@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/khalil-website/hw3/",
+  base: "/khalil-website/",
 });
