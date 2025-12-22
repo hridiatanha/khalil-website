@@ -6,8 +6,8 @@
   <title>Khalil Biryani House</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
 
+<body>
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
@@ -25,23 +25,37 @@
       </nav>
 
       <div class="header-actions">
-        <button id="order-btn" class="order-btn">Order Online</button>
+        <button id="order-btn" class="order-btn" type="button">Order Online</button>
 
         <!-- Cart Toggle -->
-        <button id="cart-toggle" class="cart-btn" aria-label="Open cart" aria-haspopup="dialog" aria-controls="cart-drawer">
-          🛒 <span id="cart-count" class="cart-count" aria-live="polite">0</span>
+        <button
+          id="cart-toggle"
+          class="cart-btn"
+          type="button"
+          aria-label="Open cart"
+          aria-haspopup="dialog"
+          aria-controls="cart-drawer"
+        >
+          🛒
+          <span id="cart-count" class="cart-count" aria-live="polite">0</span>
         </button>
 
-        <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
+        <button id="hamburger" class="hamburger" type="button" aria-label="Open menu">☰</button>
       </div>
     </div>
   </header>
 
   <!-- CART DRAWER -->
-  <aside id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+  <aside
+    id="cart-drawer"
+    class="cart-drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cart-title"
+  >
     <div class="cart-header">
       <h2 id="cart-title">Your Cart</h2>
-      <button id="cart-close" class="cart-close" aria-label="Close cart">✕</button>
+      <button id="cart-close" class="cart-close" type="button" aria-label="Close cart">✕</button>
     </div>
 
     <div id="cart-items" class="cart-items" aria-live="polite"></div>
@@ -51,13 +65,16 @@
         <span>Total:</span>
         <strong id="cart-total">$0.00</strong>
       </div>
+
       <div class="cart-actions">
         <button id="clear-cart" class="btn btn-outline" type="button">Clear Cart</button>
         <button class="btn btn-dark" type="button" disabled title="Demo only">Checkout</button>
       </div>
+
       <p class="cart-note">* Demo cart for Homework 2 (no payment processing).</p>
     </div>
   </aside>
+
   <div id="cart-backdrop" class="cart-backdrop" hidden></div>
 
   <!-- HERO -->
@@ -73,6 +90,7 @@
   <!-- MENU -->
   <section id="menu" class="section">
     <h2>Our Menu</h2>
+
     <div class="menu-grid">
       <!-- Card 1 -->
       <article class="menu-card">
@@ -148,6 +166,7 @@
   <!-- GALLERY -->
   <section id="gallery" class="section">
     <h2>Gallery</h2>
+
     <div id="gallery-slider" class="slider" aria-label="Food gallery">
       <div class="slides">
         <img src="images/food1.webp" alt="Chicken Biryani" />
@@ -157,8 +176,9 @@
         <img src="images/food5.webp" alt="Vegetarian Dish" />
         <img src="images/food6.webp" alt="Dessert" />
       </div>
-      <button class="nav prev" onclick="moveSlide(-1)" aria-label="Previous slide">‹</button>
-      <button class="nav next" onclick="moveSlide(1)" aria-label="Next slide">›</button>
+
+      <button class="nav prev" type="button" data-slide="-1" aria-label="Previous slide">‹</button>
+      <button class="nav next" type="button" data-slide="1" aria-label="Next slide">›</button>
     </div>
   </section>
 
@@ -167,15 +187,14 @@
     <h2>About Us</h2>
     <div class="about-centered">
       <p>
-        Khalil's Food began operations in July 2017. We began our journey to provide authentic Indian
-        and Asian cuisine through community service in the Bronx, New York.
+        Khalil's Food began operations in July 2017. We began our journey to provide authentic Indian and
+        Asian cuisine through community service in the Bronx, New York.
       </p>
       <p>
         Our multi-cuisine eatery is segmented into <strong>Khalil Biryani House</strong>,
-        <strong>Khalil Halal Chinese</strong>, and <strong>Khalil Catering</strong>.
-        Over the years, we have received love and appreciation from the community for our
-        satisfactory and pleasant dining services. Today, the establishment is truly a success story,
-        with branches in the Bronx and Jackson Heights.
+        <strong>Khalil Halal Chinese</strong>, and <strong>Khalil Catering</strong>. Over the years, we have
+        received love and appreciation from the community for our satisfactory and pleasant dining services.
+        Today, the establishment is truly a success story, with branches in the Bronx and Jackson Heights.
       </p>
     </div>
   </section>
@@ -183,21 +202,36 @@
   <!-- LOCATIONS -->
   <section id="locations" class="section">
     <h2>Our Locations</h2>
+
     <div class="locations-grid">
       <div class="location">
         <h3>Parkchester</h3>
         <iframe
           src="https://www.google.com/maps?q=2104+Starling+Ave,+Bronx,+NY+10462&output=embed"
-          loading="lazy" allowfullscreen></iframe>
-        <p>📍 <a target="_blank" href="https://goo.gl/maps/SH4sChULe5iAfe3Q8">2104 Starling Ave, Bronx, NY 10462</a></p>
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+        <p>
+          📍
+          <a target="_blank" href="https://goo.gl/maps/SH4sChULe5iAfe3Q8" rel="noreferrer">
+            2104 Starling Ave, Bronx, NY 10462
+          </a>
+        </p>
       </div>
 
       <div class="location">
         <h3>Jackson Heights</h3>
         <iframe
           src="https://www.google.com/maps?q=37-14+73rd+St,+Jackson+Heights,+NY+11372&output=embed"
-          loading="lazy" allowfullscreen></iframe>
-        <p>📍 <a target="_blank" href="https://goo.gl/maps/jKHez4Yb8X72">37-14 73rd St, Jackson Heights, NY 11372</a></p>
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+        <p>
+          📍
+          <a target="_blank" href="https://goo.gl/maps/jKHez4Yb8X72" rel="noreferrer">
+            37-14 73rd St, Jackson Heights, NY 11372
+          </a>
+        </p>
       </div>
     </div>
   </section>
@@ -218,11 +252,13 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div>
-      <p>Follow Us:
-        <a href="https://www.facebook.com/orderkhalilsfood/" target="_blank">Facebook</a> |
-        <a href="https://www.instagram.com/orderkhalilsfood/" target="_blank">Instagram</a> |
-        <a href="https://www.linkedin.com/company/khalils-food/" target="_blank">LinkedIn</a>
+      <p>
+        Follow Us:
+        <a href="https://www.facebook.com/orderkhalilsfood/" target="_blank" rel="noreferrer">Facebook</a> |
+        <a href="https://www.instagram.com/orderkhalilsfood/" target="_blank" rel="noreferrer">Instagram</a> |
+        <a href="https://www.linkedin.com/company/khalils-food/" target="_blank" rel="noreferrer">LinkedIn</a>
       </p>
+
       <h3>Business Hours</h3>
       <p>Monday – Sunday: 8 AM – 2 AM</p>
       <p>&copy; 2025 Khalil Biryani House. All rights reserved.</p>
